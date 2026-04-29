@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Assignment 38 to 42</title>
+    <title>JavaScript Assignment 43 to 48</title>
     <style>
         * {
             margin: 0;
@@ -26,23 +26,137 @@
         h2 {
             font-size: 40px;
         }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            font-family: Arial;
+        }
+
+        th,
+        td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 4px 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(102, 116, 200);
+            color: white;
+        }
+
+        .count-container{
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>JavaScript Assignment 41-44</h1>
-        <h2>Open Console to See Output (Press F12)</h2>
+        <h1>JavaScript Assignment 43-48</h1>
+
+        <a href="#" onclick="showAlert()">Click Me</a>
+
+
+        <h2>Click on a Mobile</h2>
+
+        <img src="https://www.techspecs.info/_next/image/?url=https%3A%2F%2Fwww.techspecs.info%2Fuploads%2FSAMSUNG_GALAXY_S26_ULTRA_5_G_9232e2ad7e.png&w=256&q=75"
+            onclick="showMessage()" alt="Samsung Mobile" height="300px">
+
+        <img src="https://images.priceoye.pk/apple-17-pro-max-pakistan-priceoye-5k9fi-500x500.webp"
+            onclick="showMessage()" alt="iPhone Mobile" height="300px">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDUMcfQ34SY40-7NioW4b8kGFAMKE4navAQ&s"
+            onclick="showMessage()" alt="Nokia Mobile" height="300px">
+
+        <h2>Student Records</h2>
+
+        <table cellpadding="10">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Ali</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ahmed</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Sami</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Umer</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Usman</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Hassan</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Arham</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Bilal</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Zain</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Neha;</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </table>
+
+        <h2>Mouse Over the Image</h2>
+
+        <img src="https://www.techspecs.info/_next/image/?url=https%3A%2F%2Fwww.techspecs.info%2Fuploads%2FSAMSUNG_GALAXY_S26_ULTRA_5_G_9232e2ad7e.png&w=256&q=75"
+            onmouseover="changeImage(this)" onmouseout="resetImage(this)" alt="Mobile Image">
+
+        <div class="count-container">
+            <h2>Counter</h2>
+
+            <h1 id="count">0</h1>
+
+            <button onclick="increase()">Increase</button>
+            <button onclick="decrease()">Decrease</button>
+
+        </div>
     </div>
-
-    <!-- // Answer1 -->
-    <a href="#" onclick="showAlert(); return false;">Click Me</a>
-
-    <!-- // Answer2 -->
-    <img src="mobile1.jpg" onclick="showMessage()" width="150" alt="Mobile 1">
-    <img src="mobile2.jpg" onclick="showMessage()" width="150" alt="Mobile 2">
-    <img src="mobile3.jpg" onclick="showMessage()" width="150" alt="Mobile 3">
-
     <script src="app.js"></script>
 </body>
 
