@@ -1,3 +1,5 @@
+// Chapter 38-42 These answers implement chapter 41-45
+
 // Answer1
 
 function power(base, exponent) {
@@ -167,3 +169,6 @@ function calculateNotes() {
 }
 
 calculateNotes();
+
+// Chapter 43-48 These answers implement chapter 41-45
+
