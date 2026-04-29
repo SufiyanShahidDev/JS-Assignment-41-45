@@ -1,174 +1,185 @@
-// Chapter 38-42 These answers implement chapter 41-45
+// // Chapter 38-42 These answers implement chapter 41-45
 
-// Answer1
+// // Answer1
 
-function power(base, exponent) {
-    var result = 1;
-    var i = 1;
+// function power(base, exponent) {
+//     var result = 1;
+//     var i = 1;
 
-    while (i <= exponent) {
-        result = result * base;
-        i++;
-    }
+//     while (i <= exponent) {
+//         result = result * base;
+//         i++;
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-var baseNumber = +prompt("Enter base number:");
-var exponentNumber = +prompt("Enter exponent:");
+// var baseNumber = +prompt("Enter base number:");
+// var exponentNumber = +prompt("Enter exponent:");
 
-var finalResult = power(baseNumber, exponentNumber);
+// var finalResult = power(baseNumber, exponentNumber);
 
-alert("Result: " + finalResult);
-console.log("Result: " + finalResult);
+// alert("Result: " + finalResult);
+// console.log("Result: " + finalResult);
 
-//Answer5
+// //Answer5
 
-function customIndexOf(text, searchChar) {
-    var i = 0;
-    var index = -1;
+// function customIndexOf(text, searchChar) {
+//     var i = 0;
+//     var index = -1;
 
-    do {
-        if (text[i] === searchChar) {
-            index = i;
-            break;
-        }
-        i++;
-    } while (i < text.length);
+//     do {
+//         if (text[i] === searchChar) {
+//             index = i;
+//             break;
+//         }
+//         i++;
+//     } while (i < text.length);
 
-    return index;
-}
+//     return index;
+// }
 
-var userText = prompt("Enter a string:");
-var userChar = prompt("Enter a single character:");
+// var userText = prompt("Enter a string:");
+// var userChar = prompt("Enter a single character:");
 
-var result = customIndexOf(userText, userChar);
+// var result = customIndexOf(userText, userChar);
 
-alert("Index is: " + result);
-console.log("Index is: " + result);
+// alert("Index is: " + result);
+// console.log("Index is: " + result);
 
-// Answer6
+// // Answer6
 
-function removeVowels(sentence) {
-    var result = "";
-    var i = 0;
+// function removeVowels(sentence) {
+//     var result = "";
+//     var i = 0;
 
-    while (i < sentence.length) {
-        var char = sentence[i];
+//     while (i < sentence.length) {
+//         var char = sentence[i];
 
-        if (
-            char !== "a" && char !== "e" && char !== "i" &&
-            char !== "o" && char !== "u" &&
-            char !== "A" && char !== "E" && char !== "I" &&
-            char !== "O" && char !== "U"
-        ) {
-            result = result + char;
-        }
+//         if (
+//             char !== "a" && char !== "e" && char !== "i" &&
+//             char !== "o" && char !== "u" &&
+//             char !== "A" && char !== "E" && char !== "I" &&
+//             char !== "O" && char !== "U"
+//         ) {
+//             result = result + char;
+//         }
 
-        i++;
-    }
+//         i++;
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-var userSentence = prompt("Enter a sentence (max 25 characters):");
+// var userSentence = prompt("Enter a sentence (max 25 characters):");
 
-var output = removeVowels(userSentence);
+// var output = removeVowels(userSentence);
 
-alert("Sentence without vowels:\n" + output);
-console.log(output);
+// alert("Sentence without vowels:\n" + output);
+// console.log(output);
 
-// Answer7
+// // Answer7
 
-function countDoubleVowels(text) {
-    var count = 0;
-    var i = 0;
+// function countDoubleVowels(text) {
+//     var count = 0;
+//     var i = 0;
 
-    while (i < text.length - 1) {
-        var pair = text[i] + text[i + 1];
+//     while (i < text.length - 1) {
+//         var pair = text[i] + text[i + 1];
 
-        switch (pair) {
-            case "aa":
-            case "ae":
-            case "ai":
-            case "ao":
-            case "au":
+//         switch (pair) {
+//             case "aa":
+//             case "ae":
+//             case "ai":
+//             case "ao":
+//             case "au":
 
-            case "ea":
-            case "ee":
-            case "ei":
-            case "eo":
-            case "eu":
+//             case "ea":
+//             case "ee":
+//             case "ei":
+//             case "eo":
+//             case "eu":
 
-            case "ia":
-            case "ie":
-            case "ii":
-            case "io":
-            case "iu":
+//             case "ia":
+//             case "ie":
+//             case "ii":
+//             case "io":
+//             case "iu":
 
-            case "oa":
-            case "oe":
-            case "oi":
-            case "oo":
-            case "ou":
+//             case "oa":
+//             case "oe":
+//             case "oi":
+//             case "oo":
+//             case "ou":
 
-            case "ua":
-            case "ue":
-            case "ui":
-            case "uo":
-            case "uu":
-                count++;
-                break;
-        }
+//             case "ua":
+//             case "ue":
+//             case "ui":
+//             case "uo":
+//             case "uu":
+//                 count++;
+//                 break;
+//         }
 
-        i++;
-    }
+//         i++;
+//     }
 
-    return count;
-}
+//     return count;
+// }
 
-var sentence = prompt("Enter a sentence:");
-var result = countDoubleVowels(sentence.toLowerCase());
+// var sentence = prompt("Enter a sentence:");
+// var result = countDoubleVowels(sentence.toLowerCase());
 
-alert("Number of two-vowel occurrences: " + result);
-console.log("Number of two-vowel occurrences: " + result);
+// alert("Number of two-vowel occurrences: " + result);
+// console.log("Number of two-vowel occurrences: " + result);
 
 
-// Answer10
+// // Answer10
 
-function calculateNotes() {
-    var amount = +prompt("Enter amount to withdraw:");
-    var hundredNotes = 0;
-    var fiftyNotes = 0;
-    var tenNotes = 0;
+// function calculateNotes() {
+//     var amount = +prompt("Enter amount to withdraw:");
+//     var hundredNotes = 0;
+//     var fiftyNotes = 0;
+//     var tenNotes = 0;
 
-    while (amount >= 100) {
-        hundredNotes++;
-        amount = amount - 100;
-    }
+//     while (amount >= 100) {
+//         hundredNotes++;
+//         amount = amount - 100;
+//     }
 
-    while (amount >= 50) {
-        fiftyNotes++;
-        amount = amount - 50;
-    }
+//     while (amount >= 50) {
+//         fiftyNotes++;
+//         amount = amount - 50;
+//     }
 
-    while (amount >= 10) {
-        tenNotes++;
-        amount = amount - 10;
-    }
+//     while (amount >= 10) {
+//         tenNotes++;
+//         amount = amount - 10;
+//     }
 
-    alert(
-        "100 Rupee Notes: " + hundredNotes +
-        "\n50 Rupee Notes: " + fiftyNotes +
-        "\n10 Rupee Notes: " + tenNotes
-    );
+//     alert(
+//         "100 Rupee Notes: " + hundredNotes +
+//         "\n50 Rupee Notes: " + fiftyNotes +
+//         "\n10 Rupee Notes: " + tenNotes
+//     );
 
-    console.log("100 Rupee Notes: " + hundredNotes);
-    console.log("50 Rupee Notes: " + fiftyNotes);
-    console.log("10 Rupee Notes: " + tenNotes);
-}
+//     console.log("100 Rupee Notes: " + hundredNotes);
+//     console.log("50 Rupee Notes: " + fiftyNotes);
+//     console.log("10 Rupee Notes: " + tenNotes);
+// }
 
-calculateNotes();
+// calculateNotes();
 
 // Chapter 43-48 These answers implement chapter 41-45
 
+// Answer1
+
+function showAlert() {
+    alert("Link was clicked!");
+}
+
+// Answer2
+
+function showMessage() {
+    alert("Thanks for purchasing a mobile from us!");
+}
